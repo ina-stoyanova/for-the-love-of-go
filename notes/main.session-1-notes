@@ -1,0 +1,71 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"log"
+	"net/http"
+	"os"
+)
+
+// we could change this in the test
+// local test server - as simple as possible, always return the same data (e..g take it from the real server)
+// 2 parts to test this: the URL construction; given the correct input (e.g. json), what's the output of my program
+const baseURL = "https://api.openweathermap.org"
+
+func main() {
+	// format the URL
+	key := os.Getenv("OPENWEAiTHERMAP_API_KEY")
+	URL := fmt.Sprintf("%s/data/2.5/weather?q=Birmingham,UK&appid=%s", baseURL, key)
+
+	// make the request to get the data
+	resp, err := http.Get(URL)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer resp.Body.Close()
+
+	// return the data to our program user
+	io.Copy(os.Stdout, resp.Body)
+}
+
+// what could go wrong?
+
+// API key
+// Given some valid key -> get the result: misformatted, not provided, no longer valid
+// the key is a requirement for running the tests -> call the real API, this is nothing to do with our code - e.g. the API is down, or we've got no WIFI
+// test failures are for our code, not external dependencies - how does our code react
+
+// A good test is good when it's results are dependent on as few resources as possible
+
+// Eliminate as many uncertainty as possible
+// Tests should be fast
+// Fast feedback on what I'm doing; Am i getting this right? Ideally we should have 0 bugs!
+// What's the behaviour I want to test?
+
+// Mocks vs fakes
+// Fake = a substitute
+// A test double = fake
+// Mock ~ fake
+// mock = something preprogrammed to behave a certain way, but that can have its own rules & logic that could impact our results
+
+// fake server = a server that always returns the same static result
+// mock server = expects a specific behaviour = kind of fake, but with expectations about how it's supposed to be used, and verifies those expectations
+// how do you ensure the mock is working as expected? it could be wrong? how do you test it? does it really behave like the real service?
+// know a bit too much -> they could expect a certain way of executing the tests, but in reality maybe you're just updating the tests, or the logic
+// adds to the overhead of maintaining --> if you refactor, you might also need to update the mock
+// mocks are too closely coupled to the code
+
+// where do you draw the boundary between the function and the fake
+
+// e2e - have we wired up the program steps in the right way -> not run often, since we are not likely to change that too often
+// contracts - I have a contract with Open Weather API if i call it with a certain info, but if they break that contract it's their problem
+// unit tests = the code works under assumptions
+// integration tests = test those asusmptions
+// e2e test from the user's perspective
+
+// we could also test the response from the server
+// get this out in a diff package & add a function for the user to be able to use this program. Test that!
+// defer using the API key as much as possible, so get everything working locally before you plug in the API key
+// turn the Wifi off

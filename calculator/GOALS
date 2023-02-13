@@ -1,0 +1,4 @@
+GOAL: Run the tests for this project and make sure they pass.
+GOAL: Get TestSubtract passing!
+GOAL: Write a test for a function Multiply that takes two numbers as parameters, multiplies them together, and returns a single number representing the result.
+GOAL: Write an incorrect version of Multiply, and show that the test fails as a result.
