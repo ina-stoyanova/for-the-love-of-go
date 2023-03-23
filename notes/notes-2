@@ -1,0 +1,40 @@
+scattered GB London
+
+// potential problems
+- same town names across the world, even the same country?
+- could the app ask if this is the right locatiyon, maybe offer the other options?
+- show name, country, temperature, weather... (clouds, wind, sun)
+- can the API return in Celcius
+- or do I have to convert it myself? --temperature flag
+
+
+
+
+
+
+// HOW do we run all subfolder of tests run from the top level go test cmd
+
+
+
+// if all is a string, we lose a lot of the "depth" of the data structure & its fields
+// string is usually a very ambiguous
+// so we want to hang on to structure (Types) as long as we can, and only turn (throw away the structure) at the very end, when we no longer need it
+
+// we may want to limit the spreading of the external API response in our program, so we create our own struct on top of it, and map to it
+// adapter to query the external API and return only data we care about
+
+
+
+
+//if I call mapresponse and something is nil or empty, then it should not panic, but return an error & show to user
+// what would be the most flexible?
+// how would my  users use the error? if I just print it, would the users be able to react in their consumption of the error?
+// better to return the error
+// put off printing the error as much as possible, don't close off avenues before I absolutely have to (E.g. printing the error, or returning a string)
+// printing is usually very presumptuous -> e..g only while I'm dev-ing, I can see most of it
+
+//Panic is unrecoverable, internal
+//what happens if the external API is unavailable
+//Panic is when I screw up (the program), not the user, please open a GH issue -> use a library
+// I decide as the programmer when it is sensible to continue
+//explicit vs implicit panic

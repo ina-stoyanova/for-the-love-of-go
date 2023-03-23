@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 23.4885,
+    "lat": 41.8383
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "02d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 272.09,
+    "feels_like": 272.09,
+    "temp_min": 272.09,
+    "temp_max": 272.09,
+    "pressure": 1036,
+    "humidity": 91,
+    "sea_level": 1036,
+    "grnd_level": 923
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 0.96,
+    "deg": 337,
+    "gust": 1.08
+  },
+  "clouds": {
+    "all": 16
+  },
+  "dt": 1676302387,
+  "sys": {
+    "country": "BG",
+    "sunrise": 1676265915,
+    "sunset": 1676303729
+  },
+  "timezone": 7200,
+  "id": 733462,
+  "name": "Bansko",
+  "cod": 200
+}
