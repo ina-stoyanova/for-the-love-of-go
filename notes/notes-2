@@ -8,12 +8,7 @@ scattered GB London
 - or do I have to convert it myself? --temperature flag
 
 
-
-
-
-
 // HOW do we run all subfolder of tests run from the top level go test cmd
-
 
 
 // if all is a string, we lose a lot of the "depth" of the data structure & its fields
@@ -22,9 +17,6 @@ scattered GB London
 
 // we may want to limit the spreading of the external API response in our program, so we create our own struct on top of it, and map to it
 // adapter to query the external API and return only data we care about
-
-
-
 
 //if I call mapresponse and something is nil or empty, then it should not panic, but return an error & show to user
 // what would be the most flexible?
@@ -38,3 +30,21 @@ scattered GB London
 //Panic is when I screw up (the program), not the user, please open a GH issue -> use a library
 // I decide as the programmer when it is sensible to continue
 //explicit vs implicit panic
+
+// is it working?
+// is it delightful? how could it be better? ok turn it into a test
+// it feels slow? but am I measuring it the right way? What is actually important here
+
+
+// we want to use a test API key here
+// we shouldn't predict too much how
+// it's useful if the user knows which inputs matter and which don't, so they can just focus on the test and not worry about a valid key
+// testing book
+
+
+// what is the specific behaviour I want to test?
+// i want a new behaviour in my program & how would I express it
+// iterate on the test until it gets so specific it's almost code
+
+// given the test data about Bansko
+// relative paths here

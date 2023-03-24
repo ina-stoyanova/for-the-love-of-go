@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25bd05c0-de88-43ff-9386-effb81cc4ccd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api-client/main_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-client/testdata/weather.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-client/weather/weather.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculator/GOALS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/main.session-1-notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/GOAL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/calculator.go" beforeDir="false" afterPath="$PROJECT_DIR$/calculator/calculator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/calculator_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/calculator/calculator_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather/client/client_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather/parser/parser.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather/parser/parser_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather/printer/printer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/notes-2" beforeDir="false" afterPath="$PROJECT_DIR$/notes/notes-2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/weather/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather/main/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/main/main_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/weather.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather/weather.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/weather_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/weatherapp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +62,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/in4o/repositories/in4o/for-the-love-of-go/api-client-1"
+    "last_opened_file_path": "/Users/in4o"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -66,10 +71,11 @@
       <recent name="$PROJECT_DIR$/api-client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/api-client/weather" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/api-client/notes" />
-      <recent name="$PROJECT_DIR$/calculator/cmd/calculator" />
+      <recent name="$PROJECT_DIR$/weather/printer" />
+      <recent name="$PROJECT_DIR$/weather/parser" />
+      <recent name="$PROJECT_DIR$/weather/client" />
+      <recent name="$PROJECT_DIR$/notes" />
+      <recent name="$PROJECT_DIR$/api-client" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
